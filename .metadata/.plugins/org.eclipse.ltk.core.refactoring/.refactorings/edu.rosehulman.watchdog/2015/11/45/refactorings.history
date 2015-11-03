@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;edu.rosehulman.watchdog&apos; to &apos;edu.rosehulman.sws/src&apos;&#x0A;- Original project: &apos;edu.rosehulman.watchdog&apos;&#x0A;- Destination element: &apos;edu.rosehulman.sws/src&apos;&#x0A;- Original element: &apos;edu.rosehulman.watchdog/src/edu.rosehulman.watchdog&apos;" description="Copy package" destination="=edu.rosehulman.sws/src" element1="/src&lt;edu.rosehulman.watchdog" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1446516901072" version="1.0"/>
+</session>

@@ -66,6 +66,7 @@ public class PluginManager implements Runnable, IPlugin {
 	private static PluginManager instance;
 	
 	private PluginManager() {
+		System.setProperty( "user.dir", "/Users/jonathan/Desktop/CSSE 477/M2/Software-Architecture-SWS/edu.rosehulman.sws");
 		findPluginsOnStartup();
 	}
 	
@@ -77,12 +78,17 @@ public class PluginManager implements Runnable, IPlugin {
 	}
 	
 	private void findPluginsOnStartup() {
-		File dir = new File("." + System.getProperty("file.separator") + PLUGIN_DIR);
+		File dir = new File(PLUGIN_DIR);
+		System.out.println(dir.exists());
+		System.out.println(dir.getName());
+		System.out.println(dir.getAbsolutePath());
 		File [] files = dir.listFiles(new FilenameFilter() {
 		    public boolean accept(File dir, String name) {
+		    	System.out.println(name);
 		        return name.endsWith(".jar");
 		    }
 		});
+		System.out.println(files);
 		for (File f : files) {
 			String fname = f.getName();
 			System.out.println(fname + " DISCOVERED");

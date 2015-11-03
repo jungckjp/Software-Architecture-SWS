@@ -1,0 +1,6 @@
+Mon Nov 02 21:15:25 EST 2015	FILE CREATED
+Mon Nov 02 21:15:41 EST 2015	REQUEST	GET/	/0:0:0:0:0:0:0:1
+Mon Nov 02 21:15:41 EST 2015	REQUEST	GET/favicon.ico	/0:0:0:0:0:0:0:1
+Mon Nov 02 21:15:41 EST 2015	RESPONSE	Bad Request 400:null	/0:0:0:0:0:0:0:1
+Mon Nov 02 21:15:54 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/0:0:0:0:0:0:0:1
+Mon Nov 02 21:15:54 EST 2015	RESPONSE	Not Found 404:null	/0:0:0:0:0:0:0:1

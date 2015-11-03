@@ -1,0 +1,211 @@
+/*
+ * PluginManager.java
+ * Oct 25, 2015
+ *
+ * Simple Web Server (SWS) for EE407/507 and CS455/555
+ * 
+ * Copyright (C) 2011 Chandan Raj Rupakheti, Clarkson University
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public License 
+ * as published by the Free Software Foundation, either 
+ * version 3 of the License, or any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/lgpl.html>.
+ * 
+ * Contact Us:
+ * Chandan Raj Rupakheti (rupakhcr@clarkson.edu)
+ * Department of Electrical and Computer Engineering
+ * Clarkson University
+ * Potsdam
+ * NY 13699-5722
+ * http://clarkson.edu/~rupakhcr
+ */
+ 
+package pluginmanager;
+
+import java.io.File;
+import java.io.FilenameFilter;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardWatchEventKinds;
+import java.nio.file.WatchEvent;
+import java.nio.file.WatchEvent.Kind;
+import java.nio.file.WatchKey;
+import java.nio.file.WatchService;
+import java.util.HashMap;
+
+import plugins.AbstractPlugin;
+import plugins.IPlugin;
+import protocol.HttpRequest;
+import protocol.HttpResponse;
+import protocol.HttpResponseFactory;
+import protocol.Protocol;
+import server.Server;
+
+/**
+ * 
+ * @author Chandan R. Rupakheti (rupakhcr@clarkson.edu)
+ */
+public class PluginManager implements Runnable, IPlugin {
+	private HashMap<String, AbstractPlugin> plugins = new HashMap<String, AbstractPlugin>();
+	private final String PLUGIN_DIR = "web" + System.getProperty("file.separator") + "plugins";
+	
+	private final Kind<Path> ENTRY_CREATE = StandardWatchEventKinds.ENTRY_CREATE;
+	private final Kind<Path> ENTRY_DELETE = StandardWatchEventKinds.ENTRY_DELETE;
+	private final Kind<Path> ENTRY_MODIFY = StandardWatchEventKinds.ENTRY_MODIFY;
+	private final Kind<Object> OVERFLOW = StandardWatchEventKinds.OVERFLOW;
+	
+	private static PluginManager instance;
+	
+	private PluginManager() {
+		System.setProperty( "user.dir", "/Users/jonathan/Desktop/CSSE 477/M2/Software-Architecture-SWS/edu.rosehulman.sws");
+		findPluginsOnStartup();
+	}
+	
+	public static PluginManager getInstance() {
+		if (instance == null) {
+			instance = new PluginManager();
+		}
+		return instance;
+	}
+	
+	private void findPluginsOnStartup() {
+		File dir = new File(PLUGIN_DIR);
+		System.out.println(dir.exists());
+		System.out.println(dir.getAbsolutePath());
+		File [] files = dir.listFiles(new FilenameFilter() {
+		    public boolean accept(File dir, String name) {
+		    	System.out.println(name);
+		        return name.endsWith(".jar");
+		    }
+		});
+		System.out.println(files);
+		for (File f : files) {
+			String fname = f.getName();
+			System.out.println(fname + " DISCOVERED");
+			loadPlugin(fname);
+		}
+	}
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Runnable#run()
+	 */
+	@Override
+	public void run() {
+		WatchService listener;
+		try {
+			listener = FileSystems.getDefault().newWatchService();
+			Path dir = Paths.get("web" + System.getProperty("file.separator") + "plugins");
+			dir.register(listener, ENTRY_CREATE, ENTRY_DELETE, ENTRY_MODIFY);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+			return;
+		}
+		
+		while (true) {
+			WatchKey key;
+			try {
+				key = listener.take();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+				return;
+			}
+			for (WatchEvent<?> event : key.pollEvents()) {
+				WatchEvent.Kind<?> kind = event.kind();
+				
+				@SuppressWarnings("unchecked")
+				WatchEvent<Path> ev = (WatchEvent<Path>) event;
+				Path fileName = ev.context();
+				String fname = fileName.toString();
+				
+				if (!fname.endsWith(".jar")) {
+					continue;
+				}
+				
+				System.out.println(kind.name() + ": " + fname);
+				
+				String pname = fname.substring(0, fname.length() - 4);
+				
+				if (kind == OVERFLOW) {
+					System.out.println("OVERFLOW");
+					continue;
+				}
+				else if (kind == ENTRY_CREATE) {
+					System.out.println("File Created");
+					loadPlugin(fname);
+				}
+				else if (kind == ENTRY_DELETE) {
+					System.out.println("File Deleted");
+					plugins.remove(pname);
+				}
+				else if (kind == ENTRY_MODIFY) {
+					System.out.println("File Modified");
+					plugins.remove(pname);
+					loadPlugin(fname);
+				}
+			}
+		    boolean valid = key.reset();
+		    if (!valid) {
+		        break;
+		    }
+		}
+	}
+	
+	private void loadPlugin(String fname) {
+    	File f = new File(PLUGIN_DIR + System.getProperty("file.separator") + fname);
+    	String pname = fname.substring(0, fname.length() - 4);
+    	JarClassLoader jarLoader;
+    	try {
+    		jarLoader = new JarClassLoader(f.toURI().toURL());
+    		System.out.println(pname);
+    		System.out.println(f.toURI().toURL());
+			Class<?> c = jarLoader.loadClass("edu.rosehulman.extensions." + pname + ".Plugin");
+			Object o = c.newInstance();
+			if (o instanceof AbstractPlugin) {
+				AbstractPlugin plugin = (AbstractPlugin) o;
+				plugins.put(pname, plugin);
+			}
+			else {
+				System.out.println("hi3");
+				throw new ClassNotFoundException();
+			}
+		} catch (ClassNotFoundException e1) {
+			e1.printStackTrace();
+		} catch (InstantiationException e1) {
+			e1.printStackTrace();
+		} catch (IllegalAccessException e1) {
+			e1.printStackTrace();
+		} catch (MalformedURLException e1) {
+			e1.printStackTrace();
+		}
+	}
+
+	/* (non-Javadoc)
+	 * @see plugins.IPlugin#process(protocol.HttpRequest, server.Server)
+	 */
+	@Override
+	public HttpResponse process(HttpRequest request, Server server) {
+		String key = request.getUri().split("/")[1];
+		HttpResponse response = null;
+		System.out.println(request.getUri());
+		System.out.println(key);
+		if (plugins.containsKey(key)) {
+			response = plugins.get(key).process(request, server);
+		}
+		
+		if (response == null) {
+			response = HttpResponseFactory.create400BadRequest(Protocol.CLOSE);
+		}
+		System.out.println(response.toString());
+		return response;
+	}
+	
+}
