@@ -1,0 +1,9 @@
+<servlet>
+	<servlet-name>watermelon</servlet-name>
+	<servlet-class>edu.rosehulman.watermelon.GetServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>watermelon</servlet-name>
+	<url-pattern>/watermelon/*</url-pattern>
+</servlet-mapping>

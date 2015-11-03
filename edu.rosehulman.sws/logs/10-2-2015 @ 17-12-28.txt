@@ -1,0 +1,3 @@
+Mon Nov 02 17:12:28 EST 2015	FILE CREATED
+Mon Nov 02 17:13:03 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Mon Nov 02 17:13:03 EST 2015	RESPONSE	Not Found 404:null	/127.0.0.1
