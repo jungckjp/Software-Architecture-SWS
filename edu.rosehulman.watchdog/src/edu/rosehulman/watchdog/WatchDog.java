@@ -18,10 +18,12 @@ public class WatchDog extends TimerTask {
 			String host = "localhost";
 			int port = 8080;
 			try {
+				System.out.println("Testing Connection...");
 				Socket socket = new Socket(host, port);
 			} catch (IOException e) {
 				System.out.println("Starting new server!");
 				WebServer server = new WebServer();
+				server.setVisible(true);
 				server.butStartServer.doClick();
 			}
 			

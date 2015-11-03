@@ -1,0 +1,7 @@
+Mon Nov 02 19:46:11 EST 2015	FILE CREATED
+Mon Nov 02 19:46:23 EST 2015	REQUEST	PUT/httprequests/PutServlet/index.html	/127.0.0.1
+Mon Nov 02 19:46:23 EST 2015	RESPONSE	OK 200:/Users/jonathan/Desktop/CSSE 477/M2/Software-Architecture-SWS/edu.rosehulman.sws\web/index.html	/127.0.0.1
+Mon Nov 02 19:46:45 EST 2015	REQUEST	POST/httprequests/PostServlet/index.html	/127.0.0.1
+Mon Nov 02 19:46:45 EST 2015	RESPONSE	OK 200:/Users/jonathan/Desktop/CSSE 477/M2/Software-Architecture-SWS/edu.rosehulman.sws\web/index.html	/127.0.0.1
+Mon Nov 02 19:47:05 EST 2015	REQUEST	POST/httprequests/PostServlet/index.html	/127.0.0.1
+Mon Nov 02 19:47:05 EST 2015	RESPONSE	OK 200:/Users/jonathan/Desktop/CSSE 477/M2/Software-Architecture-SWS/edu.rosehulman.sws\web/index.html	/127.0.0.1
