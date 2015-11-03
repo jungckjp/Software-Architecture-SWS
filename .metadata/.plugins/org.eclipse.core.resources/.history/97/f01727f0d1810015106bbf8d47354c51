@@ -23,7 +23,7 @@ public class WatchDog extends TimerTask {
 			System.out.println("Testing Connection...");
 			Socket socket = new Socket(host, port);
 		} catch (IOException e) {
-			System.out.println("Server non-responsive. Starting new server!");
+			System.out.println("Starting new server!");
 			java.awt.EventQueue.invokeLater(new Runnable() {
 				public void run() {
 					WebServer server = new WebServer();

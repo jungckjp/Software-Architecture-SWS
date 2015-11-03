@@ -30,6 +30,7 @@ public class WatchDog extends TimerTask {
 					server.setVisible(true);
 					server.butStartServer.doClick();
 					new Thread(PluginManager.getInstance()).start();
+					new WatchDog();
 				}
 			});
 		}
