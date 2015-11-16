@@ -5,6 +5,8 @@ import plugins.AbstractPlugin;
 public class Plugin extends AbstractPlugin {
 	
 	public Plugin() {
+		this.servlets.put("MeleeCharacterGetServlet", new MeleeCharacterGetServlet());
+		this.servlets.put("MeleeCharacterPutServlet", new MeleeCharacterPutServlet());
 		this.servlets.put("GetServlet", new GetServlet());
 		this.servlets.put("PutServlet", new PutServlet());
 		this.servlets.put("PostServlet", new PostServlet());

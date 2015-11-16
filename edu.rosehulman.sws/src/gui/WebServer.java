@@ -31,6 +31,7 @@ import java.awt.event.WindowEvent;
 import javax.swing.*;
 
 import pluginmanager.PluginManager;
+import pluginmanager.RequestManager;
 import logging.Logger;
 import server.Server;
 
@@ -103,7 +104,7 @@ public class WebServer extends JFrame {
 		this.txtPortNumber = new JTextField("8080");
 		this.lblRootDirectory = new JLabel("Select Root Directory");
 		// Set the root directory to be the current working directory
-		this.txtRootDirectory = new JTextField(System.getProperty("user.dir") + "\\web");
+		this.txtRootDirectory = new JTextField(System.getProperty("user.dir") + System.getProperty("file.separator") + "web");
 		this.txtRootDirectory.setEditable(false);
 		this.txtRootDirectory.setPreferredSize(new Dimension(400, 21));
 		this.butSelect = new JButton("Select");
@@ -264,6 +265,7 @@ public class WebServer extends JFrame {
 			public void run() {
 				new WebServer().setVisible(true);
 				new Thread(PluginManager.getInstance()).start();
+				new Thread(RequestManager.getInstance()).start();
 			}
 		});
 	}

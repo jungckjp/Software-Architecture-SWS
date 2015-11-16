@@ -1,0 +1,16 @@
+Wed Nov 11 14:19:14 EST 2015	FILE CREATED
+Wed Nov 11 14:19:18 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:19:18 EST 2015	REQUEST	GET/favicon.ico	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:19:59 EST 2015	REQUEST	GET/httprequests/MeleeCharacterGetServlet/FALCO	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:22:41 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:22:41 EST 2015	REQUEST	GET/favicon.ico	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:22:52 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:22:52 EST 2015	REQUEST	GET/favicon.ico	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:22:57 EST 2015	REQUEST	GET/httprequests/MeleeCharacterGetServlet/SHIEK	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:24:40 EST 2015	REQUEST	GET/httprequests/MeleeCharacterGetServlet/MARTH	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:24:56 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:24:56 EST 2015	REQUEST	GET/favicon.ico	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:27:33 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:27:33 EST 2015	REQUEST	GET/favicon.ico	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:28:21 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:28:21 EST 2015	REQUEST	GET/favicon.ico	/0:0:0:0:0:0:0:1

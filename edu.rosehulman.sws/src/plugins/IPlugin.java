@@ -30,12 +30,11 @@ package plugins;
 
 import protocol.HttpRequest;
 import protocol.HttpResponse;
-import server.Server;
 
 /**
  * 
  * @author Tai J. Enrico (enricotj@rose-hulman.edu)
  */
 public interface IPlugin {
-	public HttpResponse process(HttpRequest request, Server server);
+	public HttpResponse process(HttpRequest request, String rootDir);
 }

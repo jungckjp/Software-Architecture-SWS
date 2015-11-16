@@ -1,0 +1,14 @@
+Sun Nov 08 21:14:49 EST 2015	FILE CREATED
+Sun Nov 08 21:14:59 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/0:0:0:0:0:0:0:1
+Sun Nov 08 21:14:59 EST 2015	RESPONSE	OK 200:C:\Users\enricotj\Code\CSSE\M4\edu.rosehulman.sws\web\index.html	/0:0:0:0:0:0:0:1
+Sun Nov 08 21:14:59 EST 2015	REQUEST	GET/favicon.ico	/0:0:0:0:0:0:0:1
+Sun Nov 08 21:15:01 EST 2015	REQUEST	GET/httprequests/GetServlet/helloworld.txt	/0:0:0:0:0:0:0:1
+Sun Nov 08 21:15:26 EST 2015	REQUEST	GET/httprequests/GetServlet/helloworld.txt	/0:0:0:0:0:0:0:1
+Sun Nov 08 21:15:27 EST 2015	RESPONSE	OK 200:C:\Users\enricotj\Code\CSSE\M4\edu.rosehulman.sws\web\helloworld.txt	/0:0:0:0:0:0:0:1
+Sun Nov 08 21:15:39 EST 2015	REQUEST	GET/httprequests/GetServlet/helloworld.txt	/0:0:0:0:0:0:0:1
+Sun Nov 08 21:15:39 EST 2015	RESPONSE	OK 200:C:\Users\enricotj\Code\CSSE\M4\edu.rosehulman.sws\web\helloworld.txt	/0:0:0:0:0:0:0:1
+Sun Nov 08 21:15:44 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/0:0:0:0:0:0:0:1
+Sun Nov 08 21:15:44 EST 2015	RESPONSE	OK 200:C:\Users\enricotj\Code\CSSE\M4\edu.rosehulman.sws\web\index.html	/0:0:0:0:0:0:0:1
+Sun Nov 08 21:15:44 EST 2015	REQUEST	GET/favicon.ico	/0:0:0:0:0:0:0:1
+Sun Nov 08 21:15:51 EST 2015	REQUEST	GET/httprequests/GetServlet/helloworld.txt	/0:0:0:0:0:0:0:1
+Sun Nov 08 21:15:51 EST 2015	RESPONSE	OK 200:C:\Users\enricotj\Code\CSSE\M4\edu.rosehulman.sws\web\helloworld.txt	/0:0:0:0:0:0:0:1

@@ -1,0 +1,5 @@
+Wed Nov 11 15:09:46 EST 2015	FILE CREATED
+Wed Nov 11 15:09:52 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/0:0:0:0:0:0:0:1
+Wed Nov 11 15:09:52 EST 2015	REQUEST	GET/favicon.ico	/0:0:0:0:0:0:0:1
+Wed Nov 11 15:10:07 EST 2015	REQUEST	POST/httprequests/MeleeCharacterPutServlet/TEST/Z/100/false/punching,%20kicking,%20screaming	/0:0:0:0:0:0:0:1
+Wed Nov 11 15:10:10 EST 2015	REQUEST	GET/httprequests/MeleeCharacterGetServlet/TEST	/0:0:0:0:0:0:0:1

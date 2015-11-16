@@ -1,0 +1,6 @@
+Tue Nov 10 13:29:19 EST 2015	FILE CREATED
+Tue Nov 10 13:29:24 EST 2015	REQUEST	GET/httprequests/MeleeCharacterGetServlet/Falco	/127.0.0.1
+Tue Nov 10 13:29:25 EST 2015	RESPONSE	OK 200:C:\Users\enricotj\Code\CSSE\M4\edu.rosehulman.sws\web\melee\Falco.json	/127.0.0.1
+Tue Nov 10 13:29:52 EST 2015	REQUEST	GET/httprequests/MeleeCharacterGetServlet/Falco	/0:0:0:0:0:0:0:1
+Tue Nov 10 13:29:52 EST 2015	RESPONSE	OK 200:C:\Users\enricotj\Code\CSSE\M4\edu.rosehulman.sws\web\melee\Falco.json	/0:0:0:0:0:0:0:1
+Tue Nov 10 13:29:52 EST 2015	REQUEST	GET/favicon.ico	/0:0:0:0:0:0:0:1

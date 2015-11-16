@@ -1,0 +1,13 @@
+Wed Nov 11 23:42:28 EST 2015	FILE CREATED
+Wed Nov 11 23:42:41 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/0:0:0:0:0:0:0:1
+Wed Nov 11 23:42:41 EST 2015	REQUEST	GET/favicon.ico	/0:0:0:0:0:0:0:1
+Wed Nov 11 23:42:52 EST 2015	REQUEST	GET/httprequests/MeleeCharacterGetServlet/FALCO	/0:0:0:0:0:0:0:1
+Wed Nov 11 23:43:51 EST 2015	REQUEST	POST/httprequests/MeleeCharacterPutServlet/KIRBY/F/26/false/Swallow-Cide,%20Power-Steal,%20Grab%20Kamikaze	/0:0:0:0:0:0:0:1
+Wed Nov 11 23:44:01 EST 2015	REQUEST	GET/httprequests/MeleeCharacterGetServlet/KIRBY	/0:0:0:0:0:0:0:1
+Wed Nov 11 23:44:14 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/137.112.222.216
+Wed Nov 11 23:44:15 EST 2015	REQUEST	GET/favicon.ico	/137.112.222.216
+Wed Nov 11 23:44:37 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/137.112.222.216
+Wed Nov 11 23:44:38 EST 2015	REQUEST	GET/favicon.ico	/137.112.222.216
+Wed Nov 11 23:44:48 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/137.112.222.216
+Wed Nov 11 23:44:48 EST 2015	REQUEST	GET/favicon.ico	/137.112.222.216
+Wed Nov 11 23:45:46 EST 2015	REQUEST	GET/favicon.ico	/137.112.222.216

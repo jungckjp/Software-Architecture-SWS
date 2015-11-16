@@ -34,7 +34,6 @@ import protocol.HttpRequest;
 import protocol.HttpResponse;
 import protocol.HttpResponseFactory;
 import protocol.Protocol;
-import server.Server;
 
 /**
  * 
@@ -43,13 +42,13 @@ import server.Server;
 public abstract class AbstractPlugin implements IPlugin {
 	protected HashMap<String, IPlugin> servlets = new HashMap<String, IPlugin>();
 
-	public HttpResponse process(HttpRequest request, Server server) {
+	public HttpResponse process(HttpRequest request, String rootDir) {
 		HttpResponse response = null;
 		String key = request.getUri().split("/")[2];
 		if (!servlets.containsKey(key)) {
 			return HttpResponseFactory.create400BadRequest(Protocol.CLOSE);
 		}
-		response = servlets.get(key).process(request, server);
+		response = servlets.get(key).process(request, rootDir);
 		if (response == null) {
 			return HttpResponseFactory.create400BadRequest(Protocol.CLOSE);
 		}

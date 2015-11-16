@@ -1,0 +1,17 @@
+Wed Nov 11 14:34:59 EST 2015	FILE CREATED
+Wed Nov 11 14:35:04 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:35:04 EST 2015	REQUEST	GET/favicon.ico	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:35:37 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:35:37 EST 2015	REQUEST	GET/favicon.ico	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:58:22 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:58:22 EST 2015	REQUEST	GET/favicon.ico	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:58:32 EST 2015	REQUEST	POST/httprequests/MeleeCharacterPutServlet/test/Z/100/on/%22false%22	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:58:57 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:58:57 EST 2015	REQUEST	GET/favicon.ico	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:59:21 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:59:21 EST 2015	REQUEST	GET/favicon.ico	/0:0:0:0:0:0:0:1
+Wed Nov 11 14:59:38 EST 2015	REQUEST	POST/httprequests/MeleeCharacterPutServlet/TEST/Z/100/true/%22unknown%22	/0:0:0:0:0:0:0:1
+Wed Nov 11 15:00:03 EST 2015	REQUEST	POST/httprequests/MeleeCharacterPutServlet/TEST/Z/100/true/%22unknown,%20whee%22	/0:0:0:0:0:0:0:1
+Wed Nov 11 15:01:42 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/0:0:0:0:0:0:0:1
+Wed Nov 11 15:01:42 EST 2015	REQUEST	GET/favicon.ico	/0:0:0:0:0:0:0:1
+Wed Nov 11 15:02:00 EST 2015	REQUEST	POST/httprequests/MeleeCharacterPutServlet/TEST/100/Z/true/unknown,%20testing,%20whee	/0:0:0:0:0:0:0:1

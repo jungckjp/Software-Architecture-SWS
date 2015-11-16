@@ -26,6 +26,7 @@ import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.OutputStream;
+import java.io.Serializable;
 import java.util.Collections;
 import java.util.Map;
 
@@ -34,13 +35,15 @@ import java.util.Map;
  * 
  * @author Chandan R. Rupakheti (rupakhet@rose-hulman.edu)
  */
-public class HttpResponse {
+public class HttpResponse implements Serializable {
+	private static final long serialVersionUID = 848991485198968696L;
 	private String version;
 	private int status;
 	private String phrase;
 	private Map<String, String> header;
 	private File file;
-
+	
+	public long id;
 	
 	/**
 	 * Constructs a HttpResponse object using supplied parameter
@@ -139,23 +142,23 @@ public class HttpResponse {
 
 		// Write a blank line
 		out.write(Protocol.CRLF.getBytes());
-
+		
 		// We are reading a file
-		if(this.getStatus() == Protocol.OK_CODE && file != null) {
+		if(this.getStatus() == Protocol.OK_CODE && this.file != null) {
 			// Process text documents
-			FileInputStream fileInStream = new FileInputStream(file);
+			FileInputStream fileInStream = new FileInputStream(this.file);
 			BufferedInputStream inStream = new BufferedInputStream(fileInStream, Protocol.CHUNK_LENGTH);
 			
 			byte[] buffer = new byte[Protocol.CHUNK_LENGTH];
 			int bytesRead = 0;
 			// While there is some bytes to read from file, read each chunk and send to the socket out stream
 			while((bytesRead = inStream.read(buffer)) != -1) {
+				System.out.println(new String(buffer));
 				out.write(buffer, 0, bytesRead);
 			}
 			// Close the file input stream, we are done reading
 			inStream.close();
 		}
-		
 		// Flush the data so that outStream sends everything through the socket 
 		out.flush();
 	}

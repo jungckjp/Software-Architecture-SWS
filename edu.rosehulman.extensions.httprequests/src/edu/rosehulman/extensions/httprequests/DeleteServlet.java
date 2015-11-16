@@ -7,12 +7,10 @@ import protocol.HttpRequest;
 import protocol.HttpResponse;
 import protocol.HttpResponseFactory;
 import protocol.Protocol;
-import server.Server;
 
 public class DeleteServlet implements IPlugin {
 
-	public HttpResponse process(HttpRequest request, Server server) {
-		String rootDir = server.getRootDirectory();
+	public HttpResponse process(HttpRequest request, String rootDir) {
 		String[] splitString = request.getUri().split("/");
 		String fname = "";
 		for(int i = 3; i<splitString.length; i++){
@@ -33,7 +31,7 @@ public class DeleteServlet implements IPlugin {
 				file = new File(location);
 				if(file.exists()) {
 					if (file.delete()) {
-						response = HttpResponseFactory.create200OK(null, Protocol.CLOSE);
+						response = HttpResponseFactory.create200OK((File)null, Protocol.CLOSE);
 					}
 					else {
 						response = HttpResponseFactory.create400BadRequest(Protocol.CLOSE);
@@ -46,7 +44,7 @@ public class DeleteServlet implements IPlugin {
 			}
 			else { // Its a file
 				if (file.delete()) {
-					response = HttpResponseFactory.create200OK(null, Protocol.CLOSE);
+					response = HttpResponseFactory.create200OK((File)null, Protocol.CLOSE);
 				}
 				else {
 					response = HttpResponseFactory.create400BadRequest(Protocol.CLOSE);

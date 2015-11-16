@@ -21,13 +21,16 @@
  
 package server;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 
 import logging.Logger;
-import pluginmanager.PluginManager;
+import pluginmanager.RequestManager;
 import protocol.HttpRequest;
 import protocol.HttpResponse;
 import protocol.HttpResponseFactory;
@@ -56,6 +59,25 @@ public class ConnectionHandler implements Runnable {
 	 */
 	public Socket getSocket() {
 		return socket;
+	}
+	
+	public boolean isBanned() {
+		String slash = System.getProperty("file.separator");
+		File file = new File("." + slash + "info" + slash + "bans.txt");
+		BufferedReader br;
+		try {
+			br = new BufferedReader(new FileReader(file));
+			String line = null;
+			while ((line = br.readLine()) != null)
+			{
+				if (this.socket.getInetAddress().toString().equals(line)) {
+					return true;
+				}
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return false;
 	}
 
 
@@ -113,6 +135,11 @@ public class ConnectionHandler implements Runnable {
 			response = HttpResponseFactory.create400BadRequest(Protocol.CLOSE);
 		}
 		
+		if (isBanned()) {
+			System.out.println("BANNED");
+			response = HttpResponseFactory.create400BadRequest(Protocol.CLOSE);
+		}
+		
 		if(response != null) {
 			// Means there was an error, now write the response object to the socket
 			try {
@@ -161,10 +188,10 @@ public class ConnectionHandler implements Runnable {
 				 */
 				Logger.getInstance().printRequest(request, socket);
 				System.out.println("Request Logged!");
-				response = PluginManager.getInstance().process(request, server);
-				Logger.getInstance().printResponse(response, socket);
-				System.out.println("Response Logged!");
 				
+				RequestManager.getInstance().process(request, server, socket, start);
+				
+				return;
 			}
 		}
 		catch(Exception e) {
@@ -183,7 +210,7 @@ public class ConnectionHandler implements Runnable {
 			// Write response and we are all done so close the socket
 			response.write(outStream);
 //			System.out.println(response);
-			socket.close();
+			//socket.close();
 		}
 		catch(Exception e){
 			// We will ignore this exception

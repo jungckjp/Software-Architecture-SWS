@@ -7,12 +7,10 @@ import protocol.HttpRequest;
 import protocol.HttpResponse;
 import protocol.HttpResponseFactory;
 import protocol.Protocol;
-import server.Server;
 
 public class GetServlet implements IPlugin {
 
-	public HttpResponse process(HttpRequest request, Server server) {
-		String rootDir = server.getRootDirectory();
+	public HttpResponse process(HttpRequest request, String rootDir) {
 		String[] splitString = request.getUri().split("/");
 		String fname = "";
 		for(int i = 3; i<splitString.length; i++){

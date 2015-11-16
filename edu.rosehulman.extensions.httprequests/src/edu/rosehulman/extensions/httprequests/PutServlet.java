@@ -12,14 +12,11 @@ import protocol.HttpRequest;
 import protocol.HttpResponse;
 import protocol.HttpResponseFactory;
 import protocol.Protocol;
-import server.Server;
 
 public class PutServlet implements IPlugin {
 
-	public HttpResponse process(HttpRequest request, Server server) {
+	public HttpResponse process(HttpRequest request, String rootDir) {
 		HttpResponse response;
-
-		String rootDir = server.getRootDirectory();
 
 		String[] splitString = request.getUri().split("/");
 		String fname = "";

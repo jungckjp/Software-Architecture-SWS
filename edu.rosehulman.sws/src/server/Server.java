@@ -21,13 +21,11 @@
  
 package server;
 
-import gui.WebServer;
-
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import pluginmanager.PluginManager;
+import gui.WebServer;
 
 /**
  * This represents a welcoming server for the incoming

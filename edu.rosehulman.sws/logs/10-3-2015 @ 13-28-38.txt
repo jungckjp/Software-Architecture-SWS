@@ -1,0 +1,58 @@
+Tue Nov 03 13:28:38 EST 2015	FILE CREATED
+Tue Nov 03 13:29:28 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:29:28 EST 2015	RESPONSE	OK 200:/Users/jonathan/Downloads/M3/edu.rosehulman.sws/web/index.html	/127.0.0.1
+Tue Nov 03 13:30:13 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:30:13 EST 2015	RESPONSE	OK 200:/Users/jonathan/Downloads/M3/edu.rosehulman.sws/web/index.html	/127.0.0.1
+Tue Nov 03 13:31:15 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:15 EST 2015	RESPONSE	OK 200:/Users/jonathan/Downloads/M3/edu.rosehulman.sws/web/index.html	/127.0.0.1
+Tue Nov 03 13:31:16 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:17 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:17 EST 2015	RESPONSE	OK 200:/Users/jonathan/Downloads/M3/edu.rosehulman.sws/web/index.html	/127.0.0.1
+Tue Nov 03 13:31:18 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:18 EST 2015	RESPONSE	OK 200:/Users/jonathan/Downloads/M3/edu.rosehulman.sws/web/index.html	/127.0.0.1
+Tue Nov 03 13:31:19 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:19 EST 2015	RESPONSE	OK 200:/Users/jonathan/Downloads/M3/edu.rosehulman.sws/web/index.html	/127.0.0.1
+Tue Nov 03 13:31:20 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:20 EST 2015	RESPONSE	OK 200:/Users/jonathan/Downloads/M3/edu.rosehulman.sws/web/index.html	/127.0.0.1
+Tue Nov 03 13:31:24 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:24 EST 2015	RESPONSE	OK 200:/Users/jonathan/Downloads/M3/edu.rosehulman.sws/web/index.html	/127.0.0.1
+Tue Nov 03 13:31:24 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:25 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:25 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:25 EST 2015	RESPONSE	OK 200:/Users/jonathan/Downloads/M3/edu.rosehulman.sws/web/index.html	/127.0.0.1
+Tue Nov 03 13:31:25 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:26 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:26 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:26 EST 2015	RESPONSE	OK 200:/Users/jonathan/Downloads/M3/edu.rosehulman.sws/web/index.html	/127.0.0.1
+Tue Nov 03 13:31:26 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:27 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:27 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:27 EST 2015	RESPONSE	OK 200:/Users/jonathan/Downloads/M3/edu.rosehulman.sws/web/index.html	/127.0.0.1
+Tue Nov 03 13:31:27 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:28 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:28 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:28 EST 2015	RESPONSE	OK 200:/Users/jonathan/Downloads/M3/edu.rosehulman.sws/web/index.html	/127.0.0.1
+Tue Nov 03 13:31:28 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:29 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:29 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:29 EST 2015	RESPONSE	OK 200:/Users/jonathan/Downloads/M3/edu.rosehulman.sws/web/index.html	/127.0.0.1
+Tue Nov 03 13:31:29 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:30 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:30 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:30 EST 2015	RESPONSE	OK 200:/Users/jonathan/Downloads/M3/edu.rosehulman.sws/web/index.html	/127.0.0.1
+Tue Nov 03 13:31:30 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:48 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:48 EST 2015	RESPONSE	OK 200:/Users/jonathan/Downloads/M3/edu.rosehulman.sws/web/index.html	/127.0.0.1
+Tue Nov 03 13:31:49 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:49 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:49 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:49 EST 2015	RESPONSE	OK 200:/Users/jonathan/Downloads/M3/edu.rosehulman.sws/web/index.html	/127.0.0.1
+Tue Nov 03 13:31:50 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:50 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:50 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:50 EST 2015	RESPONSE	OK 200:/Users/jonathan/Downloads/M3/edu.rosehulman.sws/web/index.html	/127.0.0.1
+Tue Nov 03 13:31:51 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:51 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:51 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1
+Tue Nov 03 13:31:51 EST 2015	RESPONSE	OK 200:/Users/jonathan/Downloads/M3/edu.rosehulman.sws/web/index.html	/127.0.0.1
+Tue Nov 03 13:31:52 EST 2015	REQUEST	GET/httprequests/GetServlet/index.html	/127.0.0.1

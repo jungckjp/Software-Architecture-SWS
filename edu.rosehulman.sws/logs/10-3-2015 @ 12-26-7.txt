@@ -1,0 +1,11 @@
+Tue Nov 03 12:26:07 EST 2015	FILE CREATED
+Tue Nov 03 12:26:13 EST 2015	REQUEST	GET/httprequests/GetServlet/secret/supersecret.txt	/127.0.0.1
+Tue Nov 03 12:26:13 EST 2015	RESPONSE	OK 200:C:\Users\enricotj\Code\CSSE\M2_1\edu.rosehulman.sws\web\secret\supersecret.txt	/127.0.0.1
+Tue Nov 03 12:26:26 EST 2015	REQUEST	GET/httprequests/GetServlet/secret/supersecret.txt	/127.0.0.1
+Tue Nov 03 12:26:26 EST 2015	RESPONSE	OK 200:C:\Users\enricotj\Code\CSSE\M2_1\edu.rosehulman.sws\web\secret\supersecret.txt	/127.0.0.1
+Tue Nov 03 12:26:41 EST 2015	REQUEST	GET/httprequests/GetServlet/secret/supersecret.txt	/127.0.0.1
+Tue Nov 03 12:26:41 EST 2015	RESPONSE	OK 200:C:\Users\enricotj\Code\CSSE\M2_1\edu.rosehulman.sws\web\secret\supersecret.txt	/127.0.0.1
+Tue Nov 03 12:26:44 EST 2015	REQUEST	GET/httprequests/GetServlet/secret/supersecret.txt	/127.0.0.1
+Tue Nov 03 12:26:44 EST 2015	RESPONSE	OK 200:C:\Users\enricotj\Code\CSSE\M2_1\edu.rosehulman.sws\web\secret\supersecret.txt	/127.0.0.1
+Tue Nov 03 12:26:54 EST 2015	REQUEST	GET/httprequests/GetServlet/secret/secret.txt	/127.0.0.1
+Tue Nov 03 12:26:54 EST 2015	RESPONSE	OK 200:C:\Users\enricotj\Code\CSSE\M2_1\edu.rosehulman.sws\web\secret\secret.txt	/127.0.0.1

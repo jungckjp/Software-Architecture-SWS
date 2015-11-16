@@ -66,7 +66,6 @@ public class PluginManager implements Runnable, IPlugin {
 	private static PluginManager instance;
 	
 	private PluginManager() {
-		System.setProperty( "user.dir", "/Users/jonathan/Desktop/CSSE 477/M2/Software-Architecture-SWS/edu.rosehulman.sws");
 		findPluginsOnStartup();
 	}
 	
@@ -78,17 +77,12 @@ public class PluginManager implements Runnable, IPlugin {
 	}
 	
 	private void findPluginsOnStartup() {
-		File dir = new File(PLUGIN_DIR);
-		System.out.println(dir.exists());
-		System.out.println(dir.getName());
-		System.out.println(dir.getAbsolutePath());
+		File dir = new File("." + System.getProperty("file.separator") + PLUGIN_DIR);
 		File [] files = dir.listFiles(new FilenameFilter() {
 		    public boolean accept(File dir, String name) {
-		    	System.out.println(name);
 		        return name.endsWith(".jar");
 		    }
 		});
-		System.out.println(files);
 		for (File f : files) {
 			String fname = f.getName();
 			System.out.println(fname + " DISCOVERED");
@@ -193,13 +187,13 @@ public class PluginManager implements Runnable, IPlugin {
 	 * @see plugins.IPlugin#process(protocol.HttpRequest, server.Server)
 	 */
 	@Override
-	public HttpResponse process(HttpRequest request, Server server) {
+	public HttpResponse process(HttpRequest request, String rootDir) {
 		String key = request.getUri().split("/")[1];
 		HttpResponse response = null;
 		System.out.println(request.getUri());
 		System.out.println(key);
 		if (plugins.containsKey(key)) {
-			response = plugins.get(key).process(request, server);
+			response = plugins.get(key).process(request, rootDir);
 		}
 		
 		if (response == null) {

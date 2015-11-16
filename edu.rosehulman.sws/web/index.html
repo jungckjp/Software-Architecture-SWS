@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Melee Character Statistics</h2>
+
+<input type="text" name="character" id="character">
+<button type="submit" onclick="loadDoc()">Get Stats!</button>
+
+<p id="data"></p>
+
+<br>
+<br>
+Name: <input type="text" name="name" id="name">
+<br>
+Tier: <input type="text" name="tier" id="tier">
+<br>
+Rank: <input type="text" name="rank" id="rank">
+<br>
+Fast-Faller? <input type="checkbox" name="fastfaller" id="fastfaller">
+<br>
+Special Technical Abilities: <input type="text" name="tech" id="tech">
+<br>
+
+<button type="button" onclick="submitNewChar()">Submit New Character</button>
+
+<p id="confirm"></p>
+
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+    	var melee = JSON.parse(xhttp.responseText);
+    	var ff = "Floaty";
+    	if (melee.isFastFaller) {
+    		ff = "Fast-Faller";
+    	}
+      	document.getElementById("data").innerHTML 
+      		= melee.name + " (" + melee.tier + ", " + melee.rank + ")"
+      			+ "<br>" + ff
+      			+ "<br>" + "Special Technical Abilities: " + melee.technicalInfo;
+    }
+    else if (xhttp.readyState == 4 && xhttp.status == 404) {
+    	document.getElementById("data").innerHTML = "MELEE CHARACTER NOT FOUND";
+    }
+  }
+  
+  
+  
+  xhttp.open("GET", "http://" + location.host + "/httprequests/MeleeCharacterGetServlet/" + document.getElementById("character").value.toUpperCase(), true);
+  xhttp.send();
+}
+
+function submitNewChar() {
+	var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      	document.getElementById("confirm").innerHTML = "Character Successfully Submitted!";
+    }
+    else if (xhttp.readyState == 4 && xhttp.status == 400) {
+    	document.getElementById("confirm").innerHTML = "BAD REQUEST";
+    }
+  }
+  var name = document.getElementById("name").value.toUpperCase();
+  var tier = document.getElementById("tier").value;
+  var rank = document.getElementById("rank").value;
+  var ff = document.getElementById("fastfaller").checked;
+  var tech = document.getElementById("tech").value;
+  xhttp.open("POST", "http://" + location.host + "/httprequests/MeleeCharacterPutServlet/" + name + "/" + tier + "/" + rank + "/" + ff + "/" + tech, true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>
